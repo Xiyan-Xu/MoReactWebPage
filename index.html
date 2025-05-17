@@ -26,7 +26,7 @@
 
   <title>MoReact: Generating Reactive Motion from Textual
 Descriptions</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -128,6 +128,20 @@ Descriptions</h1>
 </section>
 
 
+<!-- <section class="section"> -->
+<section class="section" style="margin-top: -5rem;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <figure>
+          <img src="static/images/task.png" alt="MoReact teaser image" style="max-width: 70%; height: auto;">
+          <figcaption class="is-size-5 mt-2">Fig. 1: Illustration of the text-driven reaction generation task. Given a motion sequence of the actor and a sentence describing the interaction, our goal is to generate the reactor's motion.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -145,6 +159,42 @@ Descriptions</h1>
 </section>
 <!-- End paper abstract -->
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <h2 class="title is-3">Method</h2>
+        <figure>
+          <img src="static/images/method.png" alt="MoReact method" style="max-width: 100%; height: auto;">
+          <figcaption class="is-size-5 mt-2">Fig. 2: Overview of MoReact</figcaption>
+        </figure>
+        <div class="content has-text-justified mt-4">
+          <p>
+            (a) Our approach to text-driven reaction generation employs a two-stage framework. First, we employ a trajectory diffusion model to generate the global trajectory of the reactor, based on the actor's full-body motion and the text description. Subsequently, we apply a full-body motion diffusion model to generate the reactor's full-body motion, based on the actor's full-body motion, the text description, as well as the synthesized reactor's trajectory.
+          </p>
+          <p>
+            (b) Our full-body motion diffusion model is built upon a transformer-based architecture, where the "TE" in the figure denotes a Transformer Encoder. The trajectory diffusion model mirrors this architecture but omits the cross-attention layer that integrates global trajectory into the generative process.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <figure>
+          <img src="static/images/qual.png" alt="MoReact qual" style="max-width: 100%; height: auto;">
+          <figcaption class="is-size-5 mt-2">Fig. 3: Qualitative Comparison. We show that MoReact consistently generates more realistic reactions than MDM InterGen, avoiding issues such as body penetration, text-motion mismatch, and interaction misalignment.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Image carousel -->
 <!-- <section class="hero is-small">
